@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container mx-auto flex justify-center grid py-20">
+        <h1 class="font-bold font-serif text-4xl text-pink-500 animate-bounce">Do you love me?</h1>
+         <div class="py-10">
+         
+            <img class="w-48 rounded-xl drop-shadow-2xl shadow-2xl shadow-zinc-250" src="../photo/photo_2026-01-27_22-11-05 (2).jpg" alt="cute gif">
+        </div>
+
+        <!-- Added flex container to place buttons side by side -->
+        <div class="flex space-x-4 mt-4">
+            <button class="button no-button bg-green-600 hover:bg-green-950 text-white font-bold py-2 px-4 rounded mr-4 shadow-lg shadow-green-600" onclick="showMessage();">Yes <i class="fa-regular fa-heart"></i> </button>
+            <button id="noButton" class="button no-button bg-red-500 hover:bg-red-950 text-white font-bold py-2 px-4 rounded mr-4 shadow-lg shadow-red-600">No <i class="fa-solid fa-heart-crack"></i></button>
+        </div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+
+        noButton.addEventListener('mouseover', () => {
+            const randomX = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        });
+
+        function showMessage() {
+            alert('များကြီးချစ်တယ် ကိုကို yoyo <3');
+        }
+    </script>
+
+</body>
+</html>
